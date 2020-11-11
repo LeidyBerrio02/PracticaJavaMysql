@@ -1,0 +1,5 @@
+Model\Conexion.class
+Test\Expecion.class
+Controlador\AsesorJDBC.class
+Test\Test.class
+Model\Asesor.class
