@@ -1,29 +1,37 @@
-
 package Model;
 
-import java.sql.Date;
-
 public class Asesor {
-    
+
     private int cedula;
     private String nombre;
     private int telefono;
-    private Date fechaNacimiento;
+    private String fechaNacimiento;
+    //private java.sql.Date fechaNacimiento;
     private String genero;
     private String cliente;
     private String sede;
     private int edad;
-    
-    
-    public Asesor(){
-        
+    private int id;
+
+    public int getId() {
+        return this.id;
     }
-    
-    public Asesor(int cedula){
-        this.cedula= cedula;
+
+    public void setId(int id) {
+        this.id = id;
     }
-    
-    public Asesor(String nombre,int telefono, Date fechaNacimiento, String genero, String cliente, String sede, int edad){
+
+    public Asesor() {
+
+    }
+
+    public Asesor(int cedula) {
+        this.cedula = cedula;
+    }
+
+    public Asesor(int id,int cedula, String nombre, int telefono, String fechaNacimiento, String genero, String cliente, String sede, int edad) {
+        this.id = id;
+        this.cedula = cedula;
         this.nombre = nombre;
         this.telefono = telefono;
         this.fechaNacimiento = fechaNacimiento;
@@ -33,8 +41,7 @@ public class Asesor {
         this.edad = edad;
         
     }
-
-    public Asesor(int cedula, String nombre, int telefono, Date fechaNacimiento, String genero, String cliente, String sede, int edad) {
+    public Asesor(int cedula, String nombre, int telefono, String fechaNacimiento, String genero, String cliente, String sede, int edad) {
         this.cedula = cedula;
         this.nombre = nombre;
         this.telefono = telefono;
@@ -45,7 +52,7 @@ public class Asesor {
         this.edad = edad;
     }
 
-    public Asesor(int cedula, String nombre, int telefono, Date fechaNacimiento, String genero, String cliente, String sede) {
+    public Asesor(int cedula, String nombre, int telefono,String  fechaNacimiento, String genero, String cliente, String sede) {
         this.cedula = cedula;
         this.nombre = nombre;
         this.telefono = telefono;
@@ -54,17 +61,15 @@ public class Asesor {
         this.cliente = cliente;
         this.sede = sede;
     }
-    
-    
-    
-     public int getCedula(){
-        return this.cedula;
+
+    public int getCedula() {
+        return cedula;
     }
-     
-    public void setCedula(int cedula){
-        this.cedula= cedula;
+
+    public void setCedula(int cedula) {
+        this.cedula = cedula;
     }
- 
+
     public String getNombre() {
         return nombre;
     }
@@ -81,11 +86,11 @@ public class Asesor {
         this.telefono = telefono;
     }
 
-    public Date getFechaNacimiento() {
+    public String getFechaNacimiento() {
         return fechaNacimiento;
     }
 
-    public void setFechaNacimiento(Date fechaNacimiento) {
+    public void setFechaNacimiento(String fechaNacimiento) {
         this.fechaNacimiento = fechaNacimiento;
     }
 
@@ -121,11 +126,11 @@ public class Asesor {
         this.edad = edad;
     }
     
-   
-    public String toString(){
-        return "Clase Asesor: cedula "+ this.cedula+ " nombre "+ this.nombre +" telefono "+this.telefono
-                + " Fecha de Nacimiento "+ this.fechaNacimiento + " edad "+ this.edad +
-                " Cliente al cual trabaja "+ this.cliente+ " sede "+ this.sede;
+    @Override
+    public String toString() {
+        return "Clase Asesor:\n Cédula: " + this.cedula + ", Nombre completo " + this.nombre + ", teléfono: " + this.telefono
+                + ", Fecha de Nacimiento " + this.fechaNacimiento + ", edad " + this.edad
+                + ", género " + this.genero + " , Cliente al cual trabaja " + this.cliente + " en la sede " + this.sede;
     }
-    
+
 }

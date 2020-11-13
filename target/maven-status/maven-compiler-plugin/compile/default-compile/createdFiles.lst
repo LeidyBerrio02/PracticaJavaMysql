@@ -1,5 +1,8 @@
 Model\Conexion.class
-Test\Expecion.class
-Controlador\AsesorJDBC.class
+Test\Implementacion.class
 Test\Test.class
+Test\Excepcion.class
 Model\Asesor.class
+Controlador\AsesorJDBC.class
+Test\ExpecionTD.class
+Test\fecha.class

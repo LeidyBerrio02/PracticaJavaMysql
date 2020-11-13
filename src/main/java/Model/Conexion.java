@@ -6,7 +6,7 @@ import java.sql.*;
 
 public class Conexion {
     
-    private static final String url="jdbc:mysql://localhost/PracticaJavaMysql?useSSL=false&serverTimezone=UTC";
+    private static final String url="jdbc:mysql://localhost/Pract?useSSL=false&serverTimezone=UTC";
     private static final String user="root";
     private static final String password="12345";
     
@@ -14,7 +14,6 @@ public class Conexion {
         Connection conexion = DriverManager.getConnection(url, user, password);
         return conexion;
     }
-    
     
     public static void close(Connection conn){
         try {
@@ -32,7 +31,8 @@ public class Conexion {
         }
     }
      
-      public static void close(ResultSet rs){
+     
+     public static void close(ResultSet rs){
         try {
             rs.close();
         } catch (SQLException ex) {
@@ -40,6 +40,7 @@ public class Conexion {
         }
     }
      
+         
      
      
     
