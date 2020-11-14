@@ -2,7 +2,8 @@ package Model;
 
 public class Asesor {
 
-    private int cedula;
+    //Creacion de clases con atributos
+    private String cedula;
     private String nombre;
     private int telefono;
     private String fechaNacimiento;
@@ -11,26 +12,28 @@ public class Asesor {
     private String cliente;
     private String sede;
     private int edad;
-    private int id;
 
-    public int getId() {
-        return this.id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
+    //Sobre carga de constructores (Cada uno es incluido al utilizar la clase Asesor y ser llamado para hacer su proceso en el crud)
     public Asesor() {
 
     }
 
-    public Asesor(int cedula) {
+    public Asesor(String cedula) {
         this.cedula = cedula;
     }
 
-    public Asesor(int id,int cedula, String nombre, int telefono, String fechaNacimiento, String genero, String cliente, String sede, int edad) {
-        this.id = id;
+    public Asesor(String cedula, String nombre, int telefono, String fechaNacimiento, int edad, String genero, String cliente, String sede) {
+        this.cedula = cedula;
+        this.nombre = nombre;
+        this.telefono = telefono;
+        this.fechaNacimiento = fechaNacimiento;
+        this.edad = edad;
+        this.genero = genero;
+        this.cliente = cliente;
+        this.sede = sede;
+    }
+    
+    public Asesor(String cedula, String nombre, int telefono, String fechaNacimiento, String genero, String cliente, String sede, int edad) {
         this.cedula = cedula;
         this.nombre = nombre;
         this.telefono = telefono;
@@ -39,20 +42,9 @@ public class Asesor {
         this.cliente = cliente;
         this.sede = sede;
         this.edad = edad;
-        
-    }
-    public Asesor(int cedula, String nombre, int telefono, String fechaNacimiento, String genero, String cliente, String sede, int edad) {
-        this.cedula = cedula;
-        this.nombre = nombre;
-        this.telefono = telefono;
-        this.fechaNacimiento = fechaNacimiento;
-        this.genero = genero;
-        this.cliente = cliente;
-        this.sede = sede;
-        this.edad = edad;
     }
 
-    public Asesor(int cedula, String nombre, int telefono,String  fechaNacimiento, String genero, String cliente, String sede) {
+    public Asesor(String cedula, String nombre, int telefono, String fechaNacimiento, String genero, String cliente, String sede) {
         this.cedula = cedula;
         this.nombre = nombre;
         this.telefono = telefono;
@@ -62,11 +54,24 @@ public class Asesor {
         this.sede = sede;
     }
 
-    public int getCedula() {
+        public Asesor(String cedula, String nombre, int telefono, String fechaNacimiento, String genero, String cliente, String sede, String cedA) {
+        this.cedula = cedula;
+        this.cedula = cedA;
+        this.nombre = nombre;
+        this.telefono = telefono;
+        this.fechaNacimiento = fechaNacimiento;
+        this.genero = genero;
+        this.cliente = cliente;
+        this.sede = sede;
+    }
+
+   
+    //Metodos set y get (set enviar , get obtener)
+    public String getCedula() {
         return cedula;
     }
 
-    public void setCedula(int cedula) {
+    public void setCedula(String cedula) {
         this.cedula = cedula;
     }
 
@@ -125,7 +130,8 @@ public class Asesor {
     public void setEdad(int edad) {
         this.edad = edad;
     }
-    
+
+    //Metodo toString heredado de la clase padre Object (Para mostrar informacion)
     @Override
     public String toString() {
         return "Clase Asesor:\n Cédula: " + this.cedula + ", Nombre completo " + this.nombre + ", teléfono: " + this.telefono

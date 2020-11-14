@@ -11,7 +11,7 @@ import java.time.ZonedDateTime;
 import java.util.Date;
 import java.util.Scanner;
 
-public class fecha {/*
+public class fecha {/* Ignorar
 
    public static Date StringToDate(String dob) throws ParseException{
       //Instantiating the SimpleDateFormat class

@@ -1,5 +1,6 @@
 Model\Conexion.class
 Test\Implementacion.class
+Test\Menu.class
 Test\Test.class
 Test\Excepcion.class
 Model\Asesor.class
